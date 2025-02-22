@@ -15,3 +15,15 @@ pub struct StmtColumn<C> {
     pub(crate) stmt_index: StmtIndex,
     pub(crate) column: C,
 }
+
+impl<C> StmtColumn<C> {
+    /// Get the [StmtIndex] that this statement column refers to.
+    pub fn stmt_index(&self) -> StmtIndex {
+        self.stmt_index
+    }
+
+    /// Get the column reference.
+    pub fn column(&self) -> &C {
+        &self.column
+    }
+}
